@@ -1,7 +1,8 @@
 #include <stdint.h>
 int main(void)
 {
-	__asm volatile("NOP");
+	int a;
+	__asm volatile("MOV %0,#1":"+r"(a): :);
     /* Loop forever */
 	for(;;);
 }
